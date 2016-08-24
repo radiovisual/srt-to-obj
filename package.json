@@ -1,6 +1,6 @@
 {
   "name": "srt-to-obj",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Convert an .srt subtitle file to an array of object literals.",
   "license": "MIT",
   "repository": "radiovisual/srt-to-obj",
@@ -16,7 +16,8 @@
     "test": "xo && ava"
   },
   "files": [
-    "index.js"
+    "index.js",
+    "parse-srt.js"
   ],
   "keywords": [
     "srt-to-obj",
