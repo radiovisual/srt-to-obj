@@ -1,0 +1,41 @@
+{
+  "name": "srt-to-obj",
+  "version": "0.0.1",
+  "description": "Convert an .srt subtitle file to an array of object literals.",
+  "license": "MIT",
+  "repository": "radiovisual/srt-to-obj",
+  "author": {
+    "name": "Michael Wuergler",
+    "email": "wuergler@gmail.com",
+    "url": "numetriclabs.com"
+  },
+  "engines": {
+    "node": ">=4"
+  },
+  "scripts": {
+    "test": "xo && ava"
+  },
+  "files": [
+    "index.js"
+  ],
+  "keywords": [
+    "srt-to-obj",
+    "srt",
+    "subtitle",
+    "untertitel",
+    "files",
+    "file",
+    "convert",
+    "object",
+    "array",
+    "transoform"
+  ],
+  "dependencies": {},
+  "devDependencies": {
+    "ava": "^0.15.2",
+    "xo": "^0.16.0"
+  },
+  "xo": {
+    "esnext": true
+  }
+}
