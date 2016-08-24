@@ -18,3 +18,8 @@ test('grabs multiline subs', async t => {
 	const secondEntry = data[1];
 	t.is(secondEntry.text, 'Line two\nLine three\nLine four\nLine five');
 });
+
+test('converts all entries', async t => {
+	const data = await fn(path.resolve('./fixtures/subtitles.srt'));
+	t.is(data.length, 3);
+});
