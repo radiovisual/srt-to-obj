@@ -23,3 +23,15 @@ test('converts all entries', async t => {
 	const data = await fn(path.resolve('./fixtures/subtitles.srt'));
 	t.is(data.length, 3);
 });
+
+test('works on long srt documents', async t => {
+	const data = await fn(path.resolve('./fixtures/subtitles_long.srt'));
+
+	t.is(data.length, 1737);
+	const lastEntry = data[1736];
+
+	t.is(lastEntry.index, '1737');
+	t.is(lastEntry.start, '02:20:39,500');
+	t.is(lastEntry.end, '02:20:42,040');
+	t.true(lastEntry.text.indexOf('PHILLIPA: Come on, Daddy') > -1);
+});
