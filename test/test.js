@@ -35,3 +35,15 @@ test('works on long srt documents', async t => {
 	t.is(lastEntry.end, '02:20:42,040');
 	t.true(lastEntry.text.indexOf('PHILLIPA: Come on, Daddy') > -1);
 });
+
+test('makes seperate data entries on long files', async t => {
+	const data = await fn(path.resolve('./fixtures/subtitles_long.srt'));
+
+	const entry = data[1725];
+
+	t.is(entry.index, '1726');
+	t.is(entry.start, '02:18:58,230');
+	t.is(entry.end, '02:18:59,860');
+	t.is(entry.timestamp, '02:18:58,230 --> 02:18:59,860');
+	t.is(entry.text, 'Thank you, sir.');
+});
