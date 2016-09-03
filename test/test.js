@@ -47,3 +47,18 @@ test('makes seperate data entries on long files', async t => {
 	t.is(entry.timestamp, '02:18:58,230 --> 02:18:59,860');
 	t.is(entry.text, 'Thank you, sir.');
 });
+
+test.cb('every entry has an index, text, start, end, timestamp', t => {
+	t.plan(1737 * 5);
+
+	fn(path.resolve('./fixtures/subtitles_long.srt')).then(data => {
+		data.forEach((sub, index) => {
+			t.is(sub.index, String(index + 1));
+			t.true(typeof sub.start === 'string');
+			t.true(typeof sub.end === 'string');
+			t.true(typeof sub.text === 'string');
+			t.true(typeof sub.timestamp === 'string');
+		});
+		t.end();
+	});
+});
