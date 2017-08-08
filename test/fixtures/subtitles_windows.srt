@@ -1,0 +1,18 @@
+1
+00:00:24,396 --> 00:00:28,121
+So I first got into
+computer programming when
+
+2
+00:00:28,121 --> 00:00:30,505
+my family got a Commodore 64.
+
+3
+00:00:30,505 --> 00:00:34,459
+I was nine years old,
+and I was basically just
+
+4
+00:00:34,459 --> 00:00:36,555
+put in front of the
+computer, turned it on
