@@ -2,7 +2,8 @@
 
 module.exports = srtData => {
 	const a = [];
-	const lines = srtData.split('\n');
+	const normalizedSrtData = srtData.replace(/\r\n/g, '\n');
+	const lines = normalizedSrtData.split('\n');
 	const len = lines.length;
 
 	let o = {
