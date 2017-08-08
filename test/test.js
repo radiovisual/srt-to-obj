@@ -15,11 +15,11 @@ test('converts srt to obj', async t => {
 test('converts windows srt to obj', async t => {
 	const data = await fn(path.resolve('./fixtures/subtitles_windows.srt'));
 
-	const firstentry = data[1];
-	t.is(firstentry.index, '2');
-	t.is(firstentry.start, '00:00:28,121');
-	t.is(firstentry.end, '00:00:30,505');
-	t.is(firstentry.text, 'my family got a Commodore 64.');
+	const secondEntry = data[1];
+	t.is(secondEntry.index, '2');
+	t.is(secondEntry.start, '00:00:28,121');
+	t.is(secondEntry.end, '00:00:30,505');
+	t.is(secondEntry.text, 'my family got a Commodore 64.');
 });
 
 test('grabs multiline subs', async t => {
